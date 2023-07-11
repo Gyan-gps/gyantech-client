@@ -25,19 +25,19 @@ function Home() {
     } else {
       navigate("/signIn");
     }
-    return () => {
-      axios
-        .post(endpoint + "user/update", {
-          userEmail: userData.userEmail,
-          value: false,
-          name: "userStatus",
-        })
-        .then((res) => {
-          console.log(res);
-          // navigate('/')
-        })
-        .catch((err) => console.log("err"));
-    };
+    // return () => {
+    //   axios
+    //     .post(endpoint + "user/update", {
+    //       userEmail: userData.userEmail,
+    //       value: false,
+    //       name: "userStatus",
+    //     })
+    //     .then((res) => {
+    //       console.log(res);
+    //       // navigate('/')
+    //     })
+    //     .catch((err) => console.log("err"));
+    // };
   }, [userData]);
   useEffect(() => {
     axios.get(endpoint + "activeUsers").then((res) => {
