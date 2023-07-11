@@ -4,9 +4,9 @@ import axios from "axios";
 import io from "socket.io-client";
 import { useState } from "react";
 import { useEffect } from "react";
+import { endpoint } from "../constant";
 
-let endpoint = "http://localhost:8000/",
-  socket;
+let socket;
 
 const SingleChat = () => {
   const [messages, setMessages] = useState([]);
